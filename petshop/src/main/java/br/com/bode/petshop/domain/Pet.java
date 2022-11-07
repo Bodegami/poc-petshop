@@ -17,6 +17,12 @@ public class Pet {
     private Double idade;
     private String dono;
 
+    //HIBERNATE ONLY
+    @Deprecated
+    public Pet() {
+
+    }
+
     public Pet(String nome, String tipoDePet, String raca, Double idade, String dono) {
         this.nome = nome;
         this.tipoDePet = tipoDePet;
