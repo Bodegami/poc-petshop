@@ -1,4 +1,4 @@
-package br.com.bode.petshop.controller.dto;
+package br.com.bode.petshop.cadastrapet;
 
 import br.com.bode.petshop.domain.Pet;
 import org.hibernate.validator.constraints.Length;

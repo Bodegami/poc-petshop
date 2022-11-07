@@ -1,4 +1,4 @@
-package br.com.bode.petshop.controller.dto;
+package br.com.bode.petshop.cadastrapet;
 
 import br.com.bode.petshop.domain.Pet;
 
@@ -34,8 +34,11 @@ public class NovoPetResponse {
 
     @Override
     public String toString() {
-        return String.format("Nome: %s - Tipo de pet: %s - Dono: %s", this.nome, this.tipoDePet, this.dono);
-
+        return "NovoPetResponse{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", tipoDePet='" + tipoDePet + '\'' +
+                ", dono='" + dono + '\'' +
+                '}';
     }
-
 }

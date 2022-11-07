@@ -1,7 +1,5 @@
-package br.com.bode.petshop.service;
+package br.com.bode.petshop.cadastrapet;
 
-import br.com.bode.petshop.controller.dto.NovoPetRequest;
-import br.com.bode.petshop.controller.dto.NovoPetResponse;
 import br.com.bode.petshop.domain.Pet;
 import br.com.bode.petshop.repositories.PetRepository;
 import org.springframework.stereotype.Service;

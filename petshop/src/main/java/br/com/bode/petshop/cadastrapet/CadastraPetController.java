@@ -1,17 +1,11 @@
-package br.com.bode.petshop.controller;
-
-import br.com.bode.petshop.controller.dto.NovoPetRequest;
-import br.com.bode.petshop.controller.dto.NovoPetResponse;
-import br.com.bode.petshop.domain.Pet;
+package br.com.bode.petshop.cadastrapet;
 
 
-import br.com.bode.petshop.service.ICadastraPet;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.util.UriBuilder;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
