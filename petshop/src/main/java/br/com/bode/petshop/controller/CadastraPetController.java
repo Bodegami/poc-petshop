@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.logging.Logger;
 
 @RestController
@@ -26,7 +27,7 @@ public class CadastraPetController {
     }
 
     @PostMapping
-    public ResponseEntity<NovoPetResponse> cadastra(@RequestBody NovoPetRequest novoPetRequest) {
+    public ResponseEntity<NovoPetResponse> cadastra(@RequestBody @Valid NovoPetRequest novoPetRequest) {
         NovoPetResponse response = iCadastraPet.cadastra(novoPetRequest);
 
         logger.info("Novo pet: " + response.toString());
