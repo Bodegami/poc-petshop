@@ -4,6 +4,7 @@ import br.com.bode.petshop.domain.Pet;
 
 public class NovoPetResponse {
 
+    private Long id;
     private String nome;
     private String tipoDePet;
     private String dono;
@@ -12,6 +13,7 @@ public class NovoPetResponse {
         this.nome = pet.getNome();
         this.tipoDePet = pet.getTipoDePet();
         this.dono = pet.getDono();
+        this.id = pet.getId();
     }
 
     public String getNome() {
@@ -24,6 +26,10 @@ public class NovoPetResponse {
 
     public String getDono() {
         return dono;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     @Override

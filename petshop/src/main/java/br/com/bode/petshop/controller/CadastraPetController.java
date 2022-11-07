@@ -11,8 +11,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.util.UriBuilder;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
+import java.net.URI;
 import java.util.logging.Logger;
 
 @RestController
@@ -30,8 +33,9 @@ public class CadastraPetController {
     public ResponseEntity<NovoPetResponse> cadastra(@RequestBody @Valid NovoPetRequest novoPetRequest) {
         NovoPetResponse response = iCadastraPet.cadastra(novoPetRequest);
 
+        URI uri = UriComponentsBuilder.fromUriString(response.getId().toString()).build().toUri();
         logger.info("Novo pet: " + response.toString());
-        return ResponseEntity.ok(response);
+        return ResponseEntity.created(uri).body(response);
     }
 
 }

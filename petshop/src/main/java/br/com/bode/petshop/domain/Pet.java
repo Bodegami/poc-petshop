@@ -1,9 +1,16 @@
 package br.com.bode.petshop.domain;
 
-import java.nio.charset.CharsetEncoder;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity(name = "tb_pets")
 public class Pet {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nome;
     private String tipoDePet;
     private String raca;
@@ -38,4 +45,7 @@ public class Pet {
         return dono;
     }
 
+    public Long getId() {
+        return id;
+    }
 }
