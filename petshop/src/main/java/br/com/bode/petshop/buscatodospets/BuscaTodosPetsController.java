@@ -17,7 +17,7 @@ public class BuscaTodosPetsController {
         this.iBuscaTodosPets = iBuscaTodosPets;
     }
 
-    @GetMapping("/buscatodos")
+    @GetMapping("/busca")
     public ResponseEntity<List<PetResponse>> buscaTodosPets() {
 
         List<PetResponse> petResponseList = iBuscaTodosPets.busca();
