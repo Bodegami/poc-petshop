@@ -1,5 +1,7 @@
 package br.com.bode.petshop.domain;
 
+import java.nio.charset.CharsetEncoder;
+
 public class Pet {
 
     private String nome;
@@ -35,4 +37,5 @@ public class Pet {
     public String getDono() {
         return dono;
     }
+
 }

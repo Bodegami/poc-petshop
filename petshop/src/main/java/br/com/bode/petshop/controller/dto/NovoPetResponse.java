@@ -8,10 +8,10 @@ public class NovoPetResponse {
     private String tipoDePet;
     private String dono;
 
-    public NovoPetResponse(String nome, String tipoDePet, String dono) {
-        this.nome = nome;
-        this.tipoDePet = tipoDePet;
-        this.dono = dono;
+    public NovoPetResponse(Pet pet) {
+        this.nome = pet.getNome();
+        this.tipoDePet = pet.getTipoDePet();
+        this.dono = pet.getDono();
     }
 
     public String getNome() {
@@ -24,6 +24,12 @@ public class NovoPetResponse {
 
     public String getDono() {
         return dono;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Nome: %s - Tipo de pet: %s - Dono: %s", this.nome, this.tipoDePet, this.dono);
+
     }
 
 }
